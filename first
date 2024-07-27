@@ -1,0 +1,32 @@
+import asyncio
+from datetime import datetime
+from telethon import TelegramClient, functions
+from telethon.tl.types import InputPeerUser
+
+# Gunakan informasi API dari my.telegram.org
+api_id = '29050819'
+api_hash = 'e801321d49ec12a06f52a91ee3ff284e'
+phone_number = '+6285692226889'
+
+# Buat client
+client = TelegramClient('session_name', api_id, api_hash)
+
+async def main():
+    await client.start(phone_number)
+    print("Client Created")
+
+    while True:
+        # Dapatkan waktu saat ini
+        now = datetime.now().strftime("%H:%M:%S")
+        new_name = f"YourDisplayName ⏱ {now}"
+        
+        # Update nama pengguna
+        await client(functions.account.UpdateProfileRequest(
+            first_name=new_name
+        ))
+
+        # Tunggu 60 detik sebelum update lagi
+        await asyncio.sleep(60)
+
+with client:
+    client.loop.run_until_complete(main())
