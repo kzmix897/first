@@ -6,7 +6,7 @@ from datetime import datetime, timedelta
 import praytimes
 
 # Replace with your API ID and hash
-api_id = 'YOUR_API_ID'
+api_id = '29050819'
 api_hash = 'YOUR_API_HASH'
 phone = 'YOUR_PHONE_NUMBER'
 
