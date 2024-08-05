@@ -7,8 +7,8 @@ import praytimes
 
 # Replace with your API ID and hash
 api_id = '29050819'
-api_hash = 'YOUR_API_HASH'
-phone = 'YOUR_PHONE_NUMBER'
+api_hash = 'e801321d49ec12a06f52a91ee3ff284e'
+phone = '+6285692226889'
 
 # Username to call
 target_username = '@xkazumih'
